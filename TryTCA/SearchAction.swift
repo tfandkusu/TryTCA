@@ -1,4 +1,6 @@
-import SwiftUI
+// https://github.com/pointfreeco/swift-composable-architecture/blob/main/Examples/Search/Search/SearchView.swift
+// より引用
+
 import ComposableArchitecture
 
 enum SearchAction: Equatable {
