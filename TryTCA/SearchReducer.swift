@@ -17,10 +17,10 @@ struct SearchReducer: ReducerProtocol {
             return .none
             
         case let .forecastResponse(id, .success(forecast)):
-            state.weather = State.Weather(
+            state.weather = SearchState.Weather(
                 id: id,
                 days: forecast.daily.time.indices.map {
-                    State.Weather.Day(
+                    SearchState.Weather.Day(
                         date: forecast.daily.time[$0],
                         temperatureMax: forecast.daily.temperatureMax[$0],
                         temperatureMaxUnit: forecast.dailyUnits.temperatureMax,
