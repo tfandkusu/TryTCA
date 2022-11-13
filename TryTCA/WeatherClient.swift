@@ -1,8 +1,5 @@
-/**
- https://github.com/pointfreeco/swift-composable-architecture/blob/main/Examples/Search/Search/WeatherClient.swift
- より引用
- */
-
+// https://github.com/pointfreeco/swift-composable-architecture/blob/main/Examples/Search/Search/WeatherClient.swift
+// より引用
 
 import ComposableArchitecture
 import Foundation

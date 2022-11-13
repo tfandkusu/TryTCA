@@ -13,6 +13,7 @@
 		B2E57C0C2921628D004243C5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2E57C0B2921628D004243C5 /* Preview Assets.xcassets */; };
 		B2E57C1D29216630004243C5 /* WeatherClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E57C1C29216630004243C5 /* WeatherClient.swift */; };
 		B2E57C2029216687004243C5 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = B2E57C1F29216687004243C5 /* ComposableArchitecture */; };
+		B2E57C2229216784004243C5 /* SearchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E57C2129216784004243C5 /* SearchState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		B2E57C082921628D004243C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2E57C0B2921628D004243C5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B2E57C1C29216630004243C5 /* WeatherClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherClient.swift; sourceTree = "<group>"; };
+		B2E57C2129216784004243C5 /* SearchState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				B2E57C082921628D004243C5 /* Assets.xcassets */,
 				B2E57C0A2921628D004243C5 /* Preview Content */,
 				B2E57C1C29216630004243C5 /* WeatherClient.swift */,
+				B2E57C2129216784004243C5 /* SearchState.swift */,
 			);
 			path = TryTCA;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 				B2E57C072921628C004243C5 /* ContentView.swift in Sources */,
 				B2E57C052921628C004243C5 /* TryTCAApp.swift in Sources */,
 				B2E57C1D29216630004243C5 /* WeatherClient.swift in Sources */,
+				B2E57C2229216784004243C5 /* SearchState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
