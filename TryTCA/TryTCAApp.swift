@@ -1,10 +1,3 @@
-//
-//  TryTCAApp.swift
-//  TryTCA
-//
-//  Created by toya on 2022/11/14.
-//
-
 import SwiftUI
 
 @main

@@ -11,6 +11,8 @@
 		B2E57C072921628C004243C5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E57C062921628C004243C5 /* ContentView.swift */; };
 		B2E57C092921628D004243C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2E57C082921628D004243C5 /* Assets.xcassets */; };
 		B2E57C0C2921628D004243C5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2E57C0B2921628D004243C5 /* Preview Assets.xcassets */; };
+		B2E57C1D29216630004243C5 /* WeatherClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E57C1C29216630004243C5 /* WeatherClient.swift */; };
+		B2E57C2029216687004243C5 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = B2E57C1F29216687004243C5 /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,7 @@
 		B2E57C062921628C004243C5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B2E57C082921628D004243C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2E57C0B2921628D004243C5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B2E57C1C29216630004243C5 /* WeatherClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2E57C2029216687004243C5 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +59,7 @@
 				B2E57C062921628C004243C5 /* ContentView.swift */,
 				B2E57C082921628D004243C5 /* Assets.xcassets */,
 				B2E57C0A2921628D004243C5 /* Preview Content */,
+				B2E57C1C29216630004243C5 /* WeatherClient.swift */,
 			);
 			path = TryTCA;
 			sourceTree = "<group>";
@@ -83,6 +88,9 @@
 			dependencies = (
 			);
 			name = TryTCA;
+			packageProductDependencies = (
+				B2E57C1F29216687004243C5 /* ComposableArchitecture */,
+			);
 			productName = TryTCA;
 			productReference = B2E57C012921628C004243C5 /* TryTCA.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +119,9 @@
 				Base,
 			);
 			mainGroup = B2E57BF82921628C004243C5;
+			packageReferences = (
+				B2E57C1E29216687004243C5 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = B2E57C022921628C004243C5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,6 +150,7 @@
 			files = (
 				B2E57C072921628C004243C5 /* ContentView.swift in Sources */,
 				B2E57C052921628C004243C5 /* TryTCAApp.swift in Sources */,
+				B2E57C1D29216630004243C5 /* WeatherClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +353,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B2E57C1E29216687004243C5 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B2E57C1F29216687004243C5 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B2E57C1E29216687004243C5 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B2E57BF92921628C004243C5 /* Project object */;
 }
