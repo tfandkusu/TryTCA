@@ -17,6 +17,7 @@
 		B2E57C2429216873004243C5 /* SearchAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E57C2329216873004243C5 /* SearchAction.swift */; };
 		B2E57C2629216940004243C5 /* SearchReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E57C2529216940004243C5 /* SearchReducer.swift */; };
 		B2E57C2E29216A46004243C5 /* TryTCATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E57C2D29216A46004243C5 /* TryTCATests.swift */; };
+		B2E57C3529216BA8004243C5 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E57C3429216BA8004243C5 /* SearchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,7 @@
 		B2E57C2529216940004243C5 /* SearchReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchReducer.swift; sourceTree = "<group>"; };
 		B2E57C2B29216A46004243C5 /* TryTCATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TryTCATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2E57C2D29216A46004243C5 /* TryTCATests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryTCATests.swift; sourceTree = "<group>"; };
+		B2E57C3429216BA8004243C5 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				B2E57C2129216784004243C5 /* SearchState.swift */,
 				B2E57C2329216873004243C5 /* SearchAction.swift */,
 				B2E57C2529216940004243C5 /* SearchReducer.swift */,
+				B2E57C3429216BA8004243C5 /* SearchView.swift */,
 			);
 			path = TryTCA;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				B2E57C2429216873004243C5 /* SearchAction.swift in Sources */,
 				B2E57C072921628C004243C5 /* ContentView.swift in Sources */,
 				B2E57C052921628C004243C5 /* TryTCAApp.swift in Sources */,
+				B2E57C3529216BA8004243C5 /* SearchView.swift in Sources */,
 				B2E57C1D29216630004243C5 /* WeatherClient.swift in Sources */,
 				B2E57C2629216940004243C5 /* SearchReducer.swift in Sources */,
 				B2E57C2229216784004243C5 /* SearchState.swift in Sources */,
@@ -295,7 +299,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -349,7 +353,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -375,7 +379,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -405,7 +409,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
