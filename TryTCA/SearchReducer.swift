@@ -63,15 +63,26 @@ struct SearchReducer: ReducerProtocol {
             // 新た無いアクションを発行しない
             return .none
             
-        case .forecastResponse(_, .failure):
-            state.weather = nil
-            state.resultForecastRequestInFlight = nil
-            return .none
+        case let .searchResultTapped(location):
+            // 地名がタップされた
+            // 読み込み中の地名を控える
+            state.resultForecastRequestInFlight = location
             
-            
-            
-        
+            return .task {
+                // 天気取得完了アクション
+                await .forecastResponse(
+                    location.id,
+                    TaskResult {
+                        //
+                        try await self.weatherClient.forecast(location)
+                    }
+                )
+            }
+            .cancellable(id: SearchWeatherID.self, cancelInFlight: true)
+                    
         case let .forecastResponse(id, .success(forecast)):
+            // 天気の取得が完了した
+            // 天気を表示する
             state.weather = SearchState.Weather(
                 id: id,
                 days: forecast.daily.time.indices.map {
@@ -84,20 +95,17 @@ struct SearchReducer: ReducerProtocol {
                     )
                 }
             )
+            // 読み込み中の地名を無くす
             state.resultForecastRequestInFlight = nil
             return .none
-
-            
-        case let .searchResultTapped(location):
-            state.resultForecastRequestInFlight = location
-            
-            return .task {
-                await .forecastResponse(
-                    location.id,
-                    TaskResult { try await self.weatherClient.forecast(location) }
-                )
-            }
-            .cancellable(id: SearchWeatherID.self, cancelInFlight: true)
+        
+        case .forecastResponse(_, .failure):
+            // 天気の取得が失敗した
+            // 天気は表示しない
+            state.weather = nil
+            // 読み込み中の地名を無くす
+            state.resultForecastRequestInFlight = nil
+            return .none
         }
     }
 }
