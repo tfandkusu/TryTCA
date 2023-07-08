@@ -1,0 +1,21 @@
+name: check
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+jobs:
+  check:
+    runs-on: macos-13
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - run: xcodebuild test -project TryTCA.xcodeproj -scheme TryTCA -destination 'platform=iOS Simulator,name=iPhone 14,OS=16.2' build test
+      - uses: codecov/codecov-action@v3
+          env: CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
