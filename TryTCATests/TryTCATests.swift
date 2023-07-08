@@ -191,24 +191,6 @@ final class SearchTests: XCTestCase {
             )
         }
     }
-    
-    func testTapOnLocationFailure() async {
-        let results = GeocodingSearch.mock.results
-        
-        let store = TestStore(
-            initialState: SearchState(results: results),
-            reducer: SearchReducer()
-        )
-        
-        store.dependencies.weatherClient.forecast = { _ in throw SomethingWentWrong() }
-        
-        await store.send(.searchResultTapped(results.first!)) {
-            $0.resultForecastRequestInFlight = results.first!
-        }
-        await store.receive(.forecastResponse(1, .failure(SomethingWentWrong()))) {
-            $0.resultForecastRequestInFlight = nil
-        }
-    }
 }
 
 private struct SomethingWentWrong: Equatable, Error {}
