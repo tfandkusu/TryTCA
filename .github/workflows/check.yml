@@ -17,7 +17,7 @@ jobs:
         with:
           fetch-depth: 0
       # 単体テスト実行 + カバレッジレポート出力
-      - run: xcodebuild test -project TryTCA.xcodeproj -scheme TryTCA -destination 'platform=iOS Simulator,name=iPhone 14,OS=16.2' build test
+      - run: xcodebuild test -enableCodeCoverage YES -project TryTCA.xcodeproj -scheme TryTCA -destination 'platform=iOS Simulator,name=iPhone 14,OS=16.2' build test
       # Codecov にカバレッジレポートをアップロード
       - uses: codecov/codecov-action@v3
         with:
